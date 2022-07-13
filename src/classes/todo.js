@@ -13,7 +13,7 @@ export default class Todo {
 		todos.update((todo) => [
 			...todo,
 			{
-				id: todo.length,
+				id: todo.length + 1,
 				title: title,
 				completed: false
 			}
