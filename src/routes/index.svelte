@@ -1,11 +1,13 @@
 <script>
-  import Navbar from "../components/navbar.svelte";
-  import UiTodos from "../components/ui-todos.svelte";
-  import AddTodos from "../components/add-todos.svelte";
-  
+  import { useMachine } from '@xstate/svelte';
+  import {toggleMachine} from '../xtate/machine'
+  import {authMachine} from "../xtate/machine"
+
+  const { state, send } = useMachine(authMachine);
+
+  console.log($state)
 </script>
-<Navbar />
-<div class="w-[50%] m-auto flex flex-col-reverse gap-7">
-  <UiTodos /> 
-  <AddTodos />
-</div>
+
+<button >
+  how
+</button>

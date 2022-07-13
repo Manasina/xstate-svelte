@@ -33,6 +33,9 @@
 	"type": "module",
 	"dependencies": {
 		"@krowten/svelte-heroicons": "^0.0.3",
-		"daisyui": "^2.18.1"
+		"@rollup/plugin-replace": "^4.0.0",
+		"@xstate/svelte": "^2.0.0",
+		"daisyui": "^2.18.1",
+		"xstate": "^4.32.1"
 	}
 }
