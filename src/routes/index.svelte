@@ -1,13 +1,13 @@
 <script>
-  import { useMachine } from '@xstate/svelte';
-  import {toggleMachine} from '../xtate/machine'
-  import {authMachine} from "../xtate/machine"
-
-  const { state, send } = useMachine(authMachine);
-
-  console.log($state)
+  import { onMount } from 'svelte'
+  let data = {}
+  onMount(async () => {
+      const req = await fetch("http://localhost:8000")
+      const response = await req.json()
+      data = response
+  })
 </script>
 
-<button >
-  how
+<button class="btn">
+  {JSON.stringify(data)}
 </button>
